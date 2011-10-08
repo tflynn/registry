@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+<<<<<<< HEAD:pom.xml
+    <groupId>net.verymuchme.registry</groupId>
+    <artifactId>registry</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>registry</name>
+=======
+    <groupId>net.verymuchme.commonstatus</groupId>
+    <artifactId>common-status</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>common-status</name>
+>>>>>>> 2b0ba3349b176b00621fdc044fff5e79e38d8b7b:pom.xml
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>net-olioinfo</id>
+            <url>http://myowndemo.com:8080/nexus/content/repositories/net-olioinfo</url>
+        </repository>
+    </repositories>
+
+<<<<<<< HEAD:pom.xml
+=======
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.jmock</groupId>
+            <artifactId>jmock-junit4</artifactId>
+            <version>2.5.1</version>
+        </dependency>
+
+    </dependencies>
+>>>>>>> 2b0ba3349b176b00621fdc044fff5e79e38d8b7b:pom.xml
+</project>

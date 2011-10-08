@@ -1,0 +1,11 @@
+.DS_Store
+logs
+logs/*
+target
+target/*
+.idea/workspace.xml
+.idea/tasks.xml
+projectFilesBackup*
+projectFilesBackup*/*
+Sample.java
+SampleTest.java

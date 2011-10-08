@@ -1,0 +1,10 @@
+<<<<<<< HEAD:.settings/org.eclipse.jdt.core.prefs
+#Sat Oct 08 17:27:38 EDT 2011
+=======
+#Sat Oct 08 08:49:01 EDT 2011
+>>>>>>> 2b0ba3349b176b00621fdc044fff5e79e38d8b7b:.settings/org.eclipse.jdt.core.prefs
+eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
+org.eclipse.jdt.core.compiler.compliance=1.6
+org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
+org.eclipse.jdt.core.compiler.source=1.6

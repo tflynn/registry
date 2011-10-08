@@ -1,0 +1,12 @@
+<<<<<<< HEAD:.settings/org.maven.ide.eclipse.prefs
+#Sat Oct 08 17:27:36 EDT 2011
+=======
+#Sat Oct 08 08:49:01 EDT 2011
+>>>>>>> 2b0ba3349b176b00621fdc044fff5e79e38d8b7b:.settings/org.maven.ide.eclipse.prefs
+activeProfiles=
+eclipse.preferences.version=1
+fullBuildGoals=process-test-resources
+resolveWorkspaceProjects=true
+resourceFilterGoals=process-resources resources\:testResources
+skipCompilerPlugin=true
+version=1
