@@ -1,11 +1,4 @@
-<<<<<<< HEAD:README
 common-registry
 ===============
 
 Provide a common, thread safe registry for (singleton) objects and settings that need to be shared across threads.
-=======
-common-status
-=============
-
-Provide a common status object to be returned from any method where more than one object needs to be returned.
->>>>>>> 2b0ba3349b176b00621fdc044fff5e79e38d8b7b:README
