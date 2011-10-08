@@ -2,21 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-<<<<<<< HEAD:pom.xml
     <groupId>net.verymuchme.registry</groupId>
     <artifactId>registry</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>registry</name>
-=======
-    <groupId>net.verymuchme.commonstatus</groupId>
-    <artifactId>common-status</artifactId>
-    <version>1.0</version>
-    <packaging>jar</packaging>
 
-    <name>common-status</name>
->>>>>>> 2b0ba3349b176b00621fdc044fff5e79e38d8b7b:pom.xml
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -34,6 +26,17 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-javadoc-plugin</artifactId>
+              <version>2.7</version>
+              <configuration>
+                <show>protected</show>
+                <nohelp>true</nohelp>
+                <reportOutputDirectory>${basedir}</reportOutputDirectory>
+                <destDir>docs</destDir>
+              </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -44,23 +47,4 @@
         </repository>
     </repositories>
 
-<<<<<<< HEAD:pom.xml
-=======
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.jmock</groupId>
-            <artifactId>jmock-junit4</artifactId>
-            <version>2.5.1</version>
-        </dependency>
-
-    </dependencies>
->>>>>>> 2b0ba3349b176b00621fdc044fff5e79e38d8b7b:pom.xml
 </project>
