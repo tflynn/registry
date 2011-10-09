@@ -47,4 +47,11 @@
         </repository>
     </repositories>
 
+	<dependencies>
+      <dependency>
+	    <groupId>net.verymuchme.commonstatus</groupId>
+    	<artifactId>common-status</artifactId>
+    	<version>1.0</version>
+	  </dependency>
+	</dependencies>
 </project>
