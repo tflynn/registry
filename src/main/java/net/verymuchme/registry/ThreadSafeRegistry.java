@@ -31,24 +31,32 @@ public class ThreadSafeRegistry {
 	}
 
 	/**
-	 * Get a registered object. Register the default if registered object does not exist. Thread-safe.
+	 * <p>Get a registered object. Register the default if registered object does not exist. Thread-safe.</p>
+	 * 
+	 * <p>CommonStatus usage</p>
+	 * <ul>
+	 * <li>status - always true since object always returned</li>
+	 * <li>Boolean property "defaultUsed" - indicates whether the default object was registered and returned</li>
+	 * <li>Object property specified by registryName contains returned object</li>
+	 * </ul>
 	 * 
 	 * @param registryName
 	 * @param defaultObject
-	 * @return CommonStatus object - status = true if registered object found, false otherwise. Object returned in property specified by supplied registryName.
+	 * @return CommonStatus
 	 */
 	public static CommonStatus retrieve(String registryName, Object defaultObject) {
 		synchronized(ThreadSafeRegistry.class) {
-			boolean registeredObjectFound = true;
+			boolean defaultUsed = false;
 			Object registeredObject = ThreadSafeRegistry.registry.get(registryName);
 			if (registeredObject == null) {
 				registeredObject = defaultObject;
 				ThreadSafeRegistry.register(registryName, registeredObject);
-				registeredObjectFound = false;
+				defaultUsed = false;
 			}
 			CommonStatus status = new CommonStatus();
-			status.setStatus(registeredObjectFound);
+			status.setStatus(true);
 			status.setOjectProperty(registryName, registeredObject);
+			status.setBooleanProperty("defaultUsed", defaultUsed);
 			return status;
 		}
 	}
