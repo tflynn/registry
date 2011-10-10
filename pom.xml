@@ -49,8 +49,8 @@
 
 	<dependencies>
       <dependency>
-	    <groupId>net.verymuchme.commonstatus</groupId>
-    	<artifactId>common-status</artifactId>
+	    <groupId>net.verymuchme.commonreturn</groupId>
+    	<artifactId>common-return</artifactId>
     	<version>1.0</version>
 	  </dependency>
 	</dependencies>
