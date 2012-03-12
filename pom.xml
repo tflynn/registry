@@ -37,13 +37,14 @@
                 <destDir>docs</destDir>
               </configuration>
             </plugin>
+            
         </plugins>
     </build>
 
     <repositories>
         <repository>
-            <id>net-olioinfo</id>
-            <url>http://myowndemo.com:8080/nexus/content/repositories/net-olioinfo</url>
+            <id>com-verymuchme</id>
+            <url>http://maven.verymuchme.com:8080/nexus/content/repositories/com.verymuchme</url>
         </repository>
     </repositories>
 
