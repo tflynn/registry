@@ -17,6 +17,7 @@ package net.verymuchme.registry;
 import java.util.HashMap;
 
 import net.verymuchme.commonreturn.CommonReturn;
+import net.verymuchme.commonreturn.Status;
 
 /**
  * <p>Provides a thread-safe location to store objects that need to be shared across threads.</p>
@@ -58,8 +59,9 @@ public class ThreadSafeRegistry {
 	 * @param defaultObject
 	 * @return CommonReturn
 	 */
-	public static CommonReturn retrieve(String registryName, Object defaultObject) {
+	public static CommonReturn<Object>  retrieve(String registryName, Object defaultObject) {
 		synchronized(ThreadSafeRegistry.class) {
+			Status status = Status.SUCCESS;
 			boolean defaultUsed = false;
 			Object registeredObject = ThreadSafeRegistry.registry.get(registryName);
 			if (registeredObject == null) {
@@ -67,11 +69,12 @@ public class ThreadSafeRegistry {
 				ThreadSafeRegistry.register(registryName, registeredObject);
 				defaultUsed = false;
 			}
-			CommonReturn status = new CommonReturn();
-			status.setStatus(true);
-			status.setOjectProperty(registryName, registeredObject);
-			status.setBooleanProperty("defaultUsed", new Boolean(defaultUsed));
-			return status;
+			CommonReturn<Object> commonReturn = new CommonReturn<Object>(registeredObject,null,status);
+			
+			//status.setStatus(true);
+			//status.setOjectProperty(registryName, registeredObject);
+			//status.setBooleanProperty("defaultUsed", new Boolean(defaultUsed));
+			return commonReturn;
 		}
 	}
 
